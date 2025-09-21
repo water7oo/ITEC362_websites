@@ -1,0 +1,74 @@
+.testing {
+  border: solid black;
+}
+
+.Master {
+  border: solid black;
+}
+
+.MainNav {
+  border: solid red;
+  display: flex;
+  padding: 10px;
+}
+
+#logoSpace {
+  width: 60px;
+}
+
+.MainNav div {
+  border: solid blue;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.ImgCarousel {
+  border: solid blue;
+}
+
+.CarouselNav {
+  border: solid black;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+}
+
+.CarouselNav button {
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.btnSpace {
+  padding: 12px;
+}
+#ToeiBuilding {
+  width: 100%;
+  height: 100%;
+}
+.Content {
+  border: solid purple;
+  display: flex;
+  text-align: center;
+}
+
+.ContentImg {
+  border: solid black;
+  width: 50%;
+}
+
+.ContentContainer {
+  border: solid black;
+  width: 50%;
+  justify-content: center;
+}
+
+.CDescription {
+  border: solid black;
+  justify-content: center;
+}
+
+#AdditionalInfo {
+  justify-content: center;
+  border: solid orange;
+}
