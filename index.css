@@ -1,74 +1,199 @@
-.testing {
-  border: solid black;
+/* ---------------------------
+   GLOBAL STYLES
+--------------------------- */
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .Master {
-  border: solid black;
+  border: none;
 }
 
+/* ---------------------------
+   NAVIGATION
+--------------------------- */
 .MainNav {
-  border: solid red;
   display: flex;
   padding: 10px;
-}
-
-#logoSpace {
-  width: 60px;
+  background-color: black;
 }
 
 .MainNav div {
-  border: solid blue;
   width: 100%;
-  justify-content: center;
   display: flex;
+  justify-content: center;
 }
 
-.ImgCarousel {
-  border: solid blue;
+.MainNav button {
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  width: 200px;
+  background-color: black;
+  color: white;
+  transition: 0.7s;
+}
+
+.MainNav button:hover {
+  background-color: white;
+  color: black;
+  width: 350px;
+  cursor: pointer;
+}
+
+/* ---------------------------
+   CAROUSEL
+--------------------------- */
+.CarouselContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.ImgCarousel img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
 }
 
 .CarouselNav {
-  border: solid black;
-  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  padding: 10px;
+  gap: 15px;
 }
 
 .CarouselNav button {
-  padding: 10px;
-  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid black 2px;
+  background-color: white;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
-.btnSpace {
-  padding: 12px;
+.CarouselNav button:hover {
+  opacity: 1;
+  background-color: black;
 }
-#ToeiBuilding {
-  width: 100%;
-  height: 100%;
-}
+
+/* ---------------------------
+   CONTENT SECTIONS
+--------------------------- */
 .Content {
-  border: solid purple;
   display: flex;
   text-align: center;
-}
-
-.ContentImg {
+  padding: 20px;
   border: solid black;
-  width: 50%;
+  flex-wrap: nowrap; /* prevents stacking */
+  align-items: center; /* vertically center the text and image */
+  gap: 20px; /* optional, space between text and image */
 }
 
 .ContentContainer {
-  border: solid black;
   width: 50%;
+  padding: 10px;
+  justify-content: flex-start; /* aligns text to left inside container */
+  border: none red;
+}
+
+.ContentImg {
+  width: 50%;
+}
+
+.ContentImg p {
+  font-size: 12pt;
+  background-color: none;
+  color: black;
+}
+
+.ContentImg div {
+  background-color: #d9d9d9bd;
   justify-content: center;
+  padding: 5px;
+  width: 100%;
+}
+
+.ContentImg img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.CHeader h1 {
+  margin: 0;
+  background-color: #d9d9d9bd;
+  color: black;
+  padding: 12px;
 }
 
 .CDescription {
-  border: solid black;
-  justify-content: center;
+  background-color: #d9d9d9bd;
+  padding: 20px;
+  color: black;
 }
 
-#AdditionalInfo {
+/* ---------------------------
+   IMAGES INSIDE CONTENT
+--------------------------- */
+.ContentImg {
+  width: 50%;
+}
+
+.ContentImg img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------------------------
+   PAGE SPECIFIC STYLES
+--------------------------- */
+
+/* Index page - involved content background */
+#InvolvedContent {
+  background-image: url("Images/SiteImages/Trigger.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.studio-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  width: 100%;
+}
+
+.studio-logos a {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  border: solid orange;
+  border: solid black 1px;
+  padding: 2px;
+  background-color: white;
+  transition: transform 0.3s ease;
+  height: 150px;
+}
+
+.studio-logos a:hover {
+  transform: scale(1.05);
+}
+
+.studio-logos img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#StudioGridContainer {
+  display: flex;
 }
