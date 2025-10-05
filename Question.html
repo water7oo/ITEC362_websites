@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studios</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body style="background-color: #f3f3f3">
+    <!-- NAVIGATION -->
+    <div class="MainNav">
+      <div class="Logo">
+        <a href="index.html"><button>LOGO</button></a>
+      </div>
+      <div id="logoSpace"></div>
+      <div class="Studios">
+        <a href="Studios.html"><button>STUDIOS</button></a>
+      </div>
+      <div class="Pipeline">
+        <a href="Pipeline.html"><button>ANIME PIPELINE</button></a>
+      </div>
+      <div class="Form">
+        <a href="Question.html"><button>HAVE A QUESTION?</button></a>
+      </div>
+    </div>
+
+    <div class="Master">
+      <div class="CarouselContainer">
+        <div class="ImgCarousel">
+          <img
+            src="Images/SiteImages/Toei_Building.jpg"
+            alt="Toei Animation Building"
+          />
+        </div>
+        <div class="CarouselNav">
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+      <!-- CONTENT - Studio Logos Grid -->
+      <div>
+        <div class="StudioContentContainer" id="GridContainer">
+          <div class="StudioHeader"><h1>INQUIRIES</h1></div>
+          <div class="StudioDescription">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            quasi dolorum, quis nemo odio enim accusamus, laudantium labore
+            expedita ex error nulla fuga minus esse delectus perspiciatis
+            architecto asperiores blanditiis molestias. Earum velit commodi
+            quasi? Quidem quas est reiciendis dolorem.
+          </div>
+        </div>
+      </div>
+
+      <form class="InquiryForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your message"
+        ></textarea>
+
+        <button type="button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -4,10 +4,13 @@
 body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f6f6f6;
+  color: #000;
 }
 
 .Master {
   border: none;
+  padding-bottom: 40px;
 }
 
 /* ---------------------------
@@ -16,7 +19,8 @@ body {
 .MainNav {
   display: flex;
   padding: 10px;
-  background-color: black;
+  background-color: #000;
+  border-bottom: 3px solid #222;
 }
 
 .MainNav div {
@@ -27,19 +31,21 @@ body {
 
 .MainNav button {
   border: none;
-  border-radius: 10px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 10px;
   width: 200px;
-  background-color: black;
-  color: white;
-  transition: 0.7s;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.4s ease;
 }
 
 .MainNav button:hover {
-  background-color: white;
-  color: black;
-  width: 350px;
+  background-color: #fff;
+  color: #000;
+  width: 250px;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 /* ---------------------------
@@ -49,12 +55,15 @@ body {
   position: relative;
   display: inline-block;
   width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid #000;
 }
 
 .ImgCarousel img {
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  height: 250px;
+  border-bottom: 2px solid #000;
 }
 
 .CarouselNav {
@@ -67,19 +76,19 @@ body {
 }
 
 .CarouselNav button {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: solid black 2px;
-  background-color: white;
+  border: solid 2px #000;
+  background-color: #fff;
   cursor: pointer;
   opacity: 0.7;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .CarouselNav button:hover {
   opacity: 1;
-  background-color: black;
+  background-color: #000;
 }
 
 /* ---------------------------
@@ -87,113 +96,308 @@ body {
 --------------------------- */
 .Content {
   display: flex;
+  align-items: center;
   text-align: center;
-  padding: 20px;
-  border: solid black;
-  flex-wrap: nowrap; /* prevents stacking */
-  align-items: center; /* vertically center the text and image */
-  gap: 20px; /* optional, space between text and image */
+  padding: 25px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  margin: 30px 40px;
+  flex-wrap: nowrap;
 }
 
 .ContentContainer {
   width: 50%;
   padding: 10px;
-  justify-content: flex-start; /* aligns text to left inside container */
-  border: none red;
-}
-
-.ContentImg {
-  width: 50%;
-}
-
-.ContentImg p {
-  font-size: 12pt;
-  background-color: none;
-  color: black;
-}
-
-.ContentImg div {
-  background-color: #d9d9d9bd;
-  justify-content: center;
-  padding: 5px;
-  width: 100%;
-}
-
-.ContentImg img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  text-align: left;
 }
 
 .CHeader h1 {
   margin: 0;
   background-color: #d9d9d9bd;
-  color: black;
+  color: #000;
   padding: 12px;
+  border-radius: 10px;
+  font-size: 1.5rem;
 }
 
 .CDescription {
   background-color: #d9d9d9bd;
   padding: 20px;
-  color: black;
+  border-radius: 10px;
+  line-height: 1.6;
+  color: #000;
+  margin-top: 10px;
 }
 
-/* ---------------------------
-   IMAGES INSIDE CONTENT
---------------------------- */
 .ContentImg {
   width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .ContentImg img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 12px;
+  border: 2px solid #000;
   display: block;
-  margin: 0 auto;
+}
+
+.ContentImg div {
+  background-color: #d9d9d9bd;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 0 0 12px 12px;
+}
+
+.ContentImg p {
+  font-size: 12pt;
+  color: #000;
 }
 
 /* ---------------------------
-   PAGE SPECIFIC STYLES
+   PAGE SPECIFIC SECTIONS
 --------------------------- */
 
-/* Index page - involved content background */
+/* Background for specific content */
 #InvolvedContent {
   background-image: url("Images/SiteImages/Trigger.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
 }
 
+/* ---------------------------
+   STUDIO LOGOS GRID
+--------------------------- */
+
+.StudioHeader h1 {
+  margin: 0 auto 10px;
+  background-color: #d9d9d9bd;
+  color: #000;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.6rem;
+  width: fit-content;
+}
+
+.StudioDescription {
+  background-color: #d9d9d9bd;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0 auto 30px;
+  width: 70%;
+}
 .studio-logos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
   justify-items: center;
-  width: 100%;
+  padding: 40px;
+  width: 80%; /* key part */
+  margin: 0 auto; /* centers the whole grid container */
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* each logo card */
 .studio-logos a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid black 1px;
-  padding: 2px;
-  background-color: white;
-  transition: transform 0.3s ease;
-  height: 150px;
+  width: 100%;
+  max-width: 350px; /* better fit inside layout */
+  height: 180px;
+  background-color: #d9d9d9bd;
+  border: 2px solid #000;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* hover effect like your pipeline grid */
 .studio-logos a:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
 }
 
+/* image styling */
 .studio-logos img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 90%;
+  height: auto;
   object-fit: contain;
+  border-radius: 10px;
 }
 
-#StudioGridContainer {
+/* small screens - 1 column */
+@media (max-width: 800px) {
+  .studio-logos {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+/* ---------------------------
+   PIPELINE SECTION
+--------------------------- */
+.PipelineSection {
   display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px;
+  background-color: #f6f6f6;
+}
+
+/* Common step styling */
+.PipelineStep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Horizontal layout */
+.PipelineStep.horizontal {
+  flex-direction: row;
+}
+
+.PipelineStep.horizontal.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Vertical layout */
+.PipelineStep.vertical {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Text and images */
+.StepText {
+  width: 50%;
+  text-align: left;
+}
+
+.StepText h2 {
+  margin-bottom: 10px;
+  background-color: #d9d9d9bd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.StepText p {
+  background-color: #d9d9d9bd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.StepImage {
+  width: 45%;
+}
+
+.StepImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+/* Vertical image style */
+.PipelineStep.vertical img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+.PipelineGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1px; /* space between videos */
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* centers the grid on the page */
+}
+
+.PipelineGrid figure:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.PipelineGrid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.PipelineGrid video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.InquiryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.InquiryForm label {
+  font-weight: bold;
+  color: #333;
+}
+
+.InquiryForm input,
+.InquiryForm textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-size: 1em;
+}
+
+.InquiryForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.InquiryForm button {
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.InquiryForm button:hover {
+  background-color: #333;
 }
